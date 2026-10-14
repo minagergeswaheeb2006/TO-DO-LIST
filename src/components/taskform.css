@@ -1,0 +1,39 @@
+.formcomponent {
+  width: 90%;
+  max-width: 600px;
+  margin: 120px auto 30px;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.maininput {
+  flex: 1;
+}
+.maininput input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+.maininput input:focus {
+  border-color: var(--primary);
+}
+.addtolist input {
+  height: 50px;
+  padding: 0 20px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.addtolist input:hover{
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}

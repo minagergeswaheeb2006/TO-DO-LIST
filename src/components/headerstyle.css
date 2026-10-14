@@ -1,0 +1,36 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  background-color: var(--white);
+  z-index: 1000;
+}
+
+.logo {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 30%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0 0 15px var(--primary);
+  transition: 0.3s;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

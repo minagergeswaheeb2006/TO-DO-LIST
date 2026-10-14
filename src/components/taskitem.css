@@ -1,0 +1,59 @@
+.tasktodo {
+  width: 90%;
+  max-width: 600px;
+  margin: 15px auto;
+  min-height: 60px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(2, 1, 71, 0.08);
+}
+
+.taskcheck {
+  display: flex;
+  align-items: center;
+}
+
+.taskcheck input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.task {
+  flex: 1;
+}
+
+.task p,
+.taskdone p {
+  margin: 0;
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.taskdone {
+  flex: 1;
+}
+
+.taskdone p {
+  text-decoration: line-through;
+}
+
+.tasktodo button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tasktodo button:hover {
+  opacity: 0.85;
+}
