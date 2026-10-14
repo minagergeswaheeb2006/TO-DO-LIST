@@ -1,16 +1,76 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# 📝 React Todo List
 
-Currently, two official plugins are available:
+A simple and interactive Todo List application built with React.js to practice component-based development, state management, and data persistence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- ➕ Add new tasks
+- ✅ Mark tasks as completed or active
+- 🗑️ Delete tasks
+- 🔍 Search tasks by name
+- 🔄 Filter tasks by status
+- 💾 Persist tasks using Local Storage
+- ✏️ Edit existing tasks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies
 
-## Expanding the Oxlint configuration
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
+- Browser Local Storage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js and npm installed.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/minagergeswaheeb2006/TO-DO-LIST.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd TO-DO-LIST
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## 📚 Learning Outcomes
+
+- Creating reusable React components
+- Managing state with `useState`
+- Handling user events and controlled forms
+- Rendering lists and managing task updates
+- Implementing search and filtering
+- Using `useEffect` with Local Storage
+- Passing data and functions through props
+
+## 👨‍💻 Author
+
+**Computer Science Student**  
+Ain Shams University
+
+## 📄 License
+
+This project is for educational and learning purposes.
