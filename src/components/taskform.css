@@ -1,39 +1,140 @@
+
+/* Add Task Form */
 .formcomponent {
-  width: 90%;
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+
+  width: calc(100% - 32px);
   max-width: 600px;
-  margin: 120px auto 30px;
-  display: flex;
-  gap: 10px;
-  display: flex;
+  box-sizing: border-box;
+
+  margin: 120px auto 28px;
+  padding: 8px;
+
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  box-shadow: 0 4px 16px rgba(2, 1, 71, 0.06);
 }
+
+/* Input container */
 .maininput {
   flex: 1;
+  min-width: 0;
 }
+
 .maininput input {
+  display: block;
   width: 100%;
-  height: 50px;
-  padding: 0 15px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 16px;
+  height: 48px;
+  box-sizing: border-box;
+
+  padding: 0 14px;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
   outline: none;
+
+  background: #fafaff;
+  color: var(--primary);
+
+  font-size: 15px;
+  font-family: inherit;
+
+  transition: border-color 0.2s ease,
+              background-color 0.2s ease,
+              box-shadow 0.2s ease;
 }
+
+.maininput input::placeholder {
+  color: #999;
+}
+
 .maininput input:focus {
   border-color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(2, 1, 71, 0.07);
 }
+
+/* Add button */
+.addtolist {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .addtolist input {
-  height: 50px;
-  padding: 0 20px;
+  height: 48px;
+  padding: 0 22px;
+
   border: 1px solid var(--primary);
-  border-radius: 8px;
-  background-color: var(--primary);
+  border-radius: 9px;
+
+  background: var(--primary);
   color: var(--white);
-  font-size: 16px;
+
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+
   cursor: pointer;
-  transition: 0.2s;
+
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
 }
-.addtolist input:hover{
-  background-color: var(--white);
-  color: var(--primary);
-  border: 1px solid var(--primary);
+
+.addtolist input:hover {
+  background: #25238a;
+  border-color: #25238a;
+  box-shadow: 0 4px 10px rgba(2, 1, 71, 0.12);
+}
+
+.addtolist input:active {
+  transform: scale(0.97);
+}
+
+.addtolist input:focus-visible {
+  outline: 3px solid rgba(0, 144, 240, 0.35);
+  outline-offset: 3px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 600px) {
+  .formcomponent {
+    gap: 8px;
+    margin-top: 105px;
+    padding: 6px;
+  }
+
+  .maininput input {
+    height: 44px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .addtolist input {
+    height: 44px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+  .formcomponent {
+    gap: 6px;
+  }
+
+  .maininput input {
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .addtolist input {
+    padding: 0 10px;
+    font-size: 12px;
+  }
 }

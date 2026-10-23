@@ -1,59 +1,179 @@
+
+/* Task Card */
 .tasktodo {
-  width: 90%;
-  max-width: 600px;
-  margin: 15px auto;
-  min-height: 60px;
-  padding: 10px 15px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  background-color: var(--white);
+  gap: 12px;
+
+  width: calc(100% - 32px);
+  max-width: 600px;
+  min-height: 64px;
+  box-sizing: border-box;
+
+  margin: 12px auto;
+  padding: 14px 16px;
+
+  background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(2, 1, 71, 0.08);
+  border-radius: 14px;
+
+  box-shadow: 0 3px 12px rgba(2, 1, 71, 0.06);
+
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
 }
 
+.tasktodo:hover {
+  border-color: #c9c9dc;
+  box-shadow: 0 6px 18px rgba(2, 1, 71, 0.09);
+}
+
+/* Checkbox */
 .taskcheck {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .taskcheck input {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
+  margin: 0;
   accent-color: var(--primary);
   cursor: pointer;
 }
 
-.task {
+/* Task text */
+.task,
+.taskdone {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .task p,
 .taskdone p {
   margin: 0;
   color: var(--primary);
-  font-size: 16px;
-}
-
-.taskdone {
-  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .taskdone p {
+  color: #9292a5;
   text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
 }
 
+/* Edit input */
+.tasktodo .task input[type="text"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 9px 11px;
+  border: 1px solid #c9c9dc;
+  border-radius: 8px;
+  outline: none;
+
+  background: #fafaff;
+  color: var(--primary);
+  font-size: 15px;
+  font-family: inherit;
+
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.tasktodo .task input[type="text"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(2, 1, 71, 0.08);
+}
+
+/* Task buttons */
 .tasktodo button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 6px;
-  background-color: var(--primary);
+  flex-shrink: 0;
+  margin: 0;
+  padding: 9px 14px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  background: var(--primary);
   color: var(--white);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.2s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
 .tasktodo button:hover {
-  opacity: 0.85;
+  background: #25238a;
+  opacity: 1;
+}
+
+.tasktodo button:active {
+  transform: scale(0.96);
+}
+
+/* Keyboard accessibility */
+.tasktodo button:focus-visible,
+.taskcheck input:focus-visible {
+  outline: 3px solid rgba(0, 144, 240, 0.35);
+  outline-offset: 3px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 600px) {
+  .tasktodo {
+    gap: 9px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .taskcheck input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .task p,
+  .taskdone p {
+    font-size: 14px;
+  }
+
+  .tasktodo button {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .tasktodo .task input[type="text"] {
+    padding: 9px 7px;
+    font-size: 14px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+  .tasktodo {
+    gap: 6px;
+    padding: 10px 8px;
+  }
+
+  .tasktodo button {
+    padding: 8px 7px;
+    font-size: 11px;
+  }
+
+  .task p,
+  .taskdone p {
+    font-size: 13px;
+  }
 }

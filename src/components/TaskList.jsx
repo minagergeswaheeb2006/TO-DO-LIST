@@ -1,7 +1,7 @@
 import React from 'react'
 import './tasklist.css'
 import TaskItem from './TaskItem'
-export default function TaskList({ search, setSearch, setTasksfilter, tasks, deletetask, isdone  , saveEditTask }) {
+export default function TaskList({ search, setSearch, setTasksfilter, tasks, deletetask, isdone, all_tasks, saveEditTask, delete_completed_tasks }) {
 
   return (
     <>
@@ -23,18 +23,22 @@ export default function TaskList({ search, setSearch, setTasksfilter, tasks, del
         <button type="button"
           onClick={() => (setTasksfilter("active"))}>active</button>
       </div>
-
       {tasks.length === 0 ? <p>Task not found</p> :
         tasks.map((task) => (
           <TaskItem
             taskname={task.name}
             taskid={task.id}
             completed={task.completed}
-            task = {task}
+            task={task}
             deletetask={deletetask}
-            isdone={isdone} 
-            saveEditTask={saveEditTask}/>
+            isdone={isdone}
+            saveEditTask={saveEditTask} />
         ))}
+      <div className="completed_task">
+        <button type="button"
+          onClick={() => (delete_completed_tasks(all))}>Delete Completed Tasks</button>
+      </div>
+
 
     </>
   )
